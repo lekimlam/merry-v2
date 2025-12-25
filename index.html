@@ -308,13 +308,17 @@
 
         closeBtn.onclick = closeLetter;
         overlay.onclick = closeLetter;
-        const startLayer = document.getElementById('startLayer');
+     const startLayer = document.getElementById('startLayer');
 
 startLayer.addEventListener('pointerdown', () => {
-    startLayer.style.display = 'none';
+    startLayer.style.opacity = '0';
+    startLayer.style.pointerEvents = 'none';
+
+    setTimeout(() => {
+        startLayer.remove();
+    }, 300);
 }, { once: true });
 
-    </script>
       
 </body>
 </html> 
