@@ -140,11 +140,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- CLICK TO START -->
-<div class="start-screen" id="startScreen">
-    <h1>🎄 Merry Christmas 🎄</h1>
-    <p>👉 Click vào màn hình để bắt đầu</p>
+  <div id="startLayer"
+     style="
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,30,0.9);
+        z-index:9999;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:26px;
+        cursor:pointer;
+        text-align:center;
+     ">
+    👉 Chạm / Click để bắt đầu 🎄
 </div>
+
     <audio id="jingle" loop preload="auto">
         <source src="giangsinh.mp3" type="audio/mpeg">
         Trình duyệt của bạn không hỗ trợ âm thanh.
@@ -298,5 +309,11 @@
         closeBtn.onclick = closeLetter;
         overlay.onclick = closeLetter;
     </script>
+        const startLayer = document.getElementById('startLayer');
+
+startLayer.addEventListener('pointerdown', () => {
+    startLayer.style.display = 'none';
+}, { once: true });
+
 </body>
 </html> 
