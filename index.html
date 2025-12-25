@@ -308,9 +308,10 @@
 
         closeBtn.onclick = closeLetter;
         overlay.onclick = closeLetter;
-     const startLayer = document.getElementById('startLayer');
+    // ===== START SCREEN =====
+const startLayer = document.getElementById('startLayer');
 
-startLayer.addEventListener('pointerdown', () => {
+startLayer.addEventListener('click', () => {
     startLayer.style.opacity = '0';
     startLayer.style.pointerEvents = 'none';
 
@@ -319,6 +320,7 @@ startLayer.addEventListener('pointerdown', () => {
     }, 300);
 }, { once: true });
 
-      
+
+       <script>
 </body>
 </html> 
